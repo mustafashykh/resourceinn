@@ -36,14 +36,7 @@ const checkAction = async (credentials = {
   username: "",
   password: ""
 }, checkType = "markCheckout()" || "markCheckin()") => {
-  const browser = await puppeteer.launch({
-    headless: false,
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
-    defaultViewport: {
-      width: 1370,
-      height: 768
-    }
-  });
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
   console.log("Opening Page...");
