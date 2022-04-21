@@ -44,7 +44,7 @@ const checkAction = async (credentials = {
     waitUntil: 'load'
   });
 
-  await delay(10000);
+  await delay(20000);
 
   // for entering email
   console.log("Entering Email and Passowrd");
@@ -64,7 +64,7 @@ const checkAction = async (credentials = {
   await page.click('button[type="submit"]');
 
   // Wait for loading content after login
-  await delay(10000);
+  await delay(20000);
 
   // Mark Action (Checkin / Checkout)
   console.log("Performing Action...");
@@ -72,7 +72,7 @@ const checkAction = async (credentials = {
   await page.waitForSelector(`span[ng-click="${checkType}"]`);
   await page.click(`span[ng-click="${checkType}"]`);
 
-  await delay(5000);
+  await delay(10000);
 
   // Confirm action on MODAL
   if (checkType === "markCheckout()") {
