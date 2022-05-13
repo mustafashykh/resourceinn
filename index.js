@@ -18,7 +18,7 @@ cron.schedule('00 10 * * 1-5', () => {
 });
 
 // Checkout at 08:00 PM
-cron.schedule('00 20 * * 1-5', () => {
+cron.schedule('00 22 * * 1-5', () => {
   console.log("Mark Checkout Out at 08:00PM WORKING DAYS (MON-FRI)");
 
   const credentials = {
